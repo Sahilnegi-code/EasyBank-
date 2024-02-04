@@ -6,6 +6,7 @@
   padding: 0;
   margin: 0;
   font-family: Public Sans;
+  box-sizing: border-box;
 }
 
 .container {
@@ -20,6 +21,9 @@
 
 /* ############# HAMBURGER-BURGER ##########  */
 
+.btn-container {
+  display: none;
+}
 .navbar {
   display: flex;
   min-height: 70px;
@@ -78,9 +82,7 @@ a {
   height: 48%;
   flex-direction: column;
   text-align: center;
-
   width: 85vw;
-
   padding-left: 0;
   top: 83px;
   left: 7%;
@@ -113,6 +115,9 @@ a {
 }
 
 /* ####### utility-classes ######### */
+.footer-color {
+  background-color: hsl(233, 26%, 24%);
+}
 .fw-300 {
   font-weight: 300;
 }
@@ -211,34 +216,33 @@ a {
 }
 .footer-easybank-container {
   margin-top: 15px;
+  text-align: center;
 }
 .footer-img-container {
   display: flex;
-  width: 60%;
+  width: 25%;
   justify-content: space-between;
+  margin: auto;
 }
 .footer-easybank-container img {
-  width: 100px;
+  width: 150px;
   color: white;
 }
 
 .footer-container {
   background-color: hsl(233, 26%, 24%);
-  /* display: flex; */
-
-  height: 100px;
 }
 
-.footer-container {
-  height: 350px;
-}
 .footer-list li {
   color: white;
   margin-top: 10px;
   margin-bottom: 10px;
   text-decoration: none;
 }
-
+.footer-img-container {
+  padding: 20px 0px;
+  min-width: 152px;
+}
 .footer-container {
   display: flex;
   flex-direction: column;
@@ -248,5 +252,247 @@ a {
 .copyright {
   color: grey;
 }
+.footer-box1 {
+  height: 50%;
+  /* width: 100%; */
+  width: 30%;
+  margin: auto;
+  display: flex;
+  height: 50%;
+  /* width: 100%; */
+  width: 100%;
+  margin: auto;
+  flex-direction: column;
+}
+.footer-box2 {
+  gap: 10px;
+  display: flex;
+  margin: 10px 0px;
+  flex-direction: column;
+}
+
+.banner-box1 {
+  background: URL("./images/bg-intro-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /* ########### img-container ######## */
+
+/* ####################  desktop Version ########## */
+
+@media (min-width: 800px) {
+  .article-content .card-title {
+    font-size: 1.3rem;
+  }
+  .article-content span {
+    display: block;
+    font-size: 11px;
+  }
+
+  .card-content {
+    font-size: 1.5rem;
+  }
+  .container-90 {
+    width: 90%;
+    margin: auto;
+  }
+
+  .hamburger {
+    display: none;
+  }
+  .nav-menu {
+    opacity: 1;
+    position: static;
+    flex-direction: row;
+    display: flex;
+  }
+  .navbar {
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px;
+  }
+
+  .nav-menu li a {
+    color: hsla(0, 0%, 50%, 0.78);
+    font-size: 1.5rem;
+    margin: 0 10px;
+  }
+  .nav-img {
+    padding: 2px;
+    width: 20%;
+    flex-shrink: 1;
+  }
+
+  .btn-container {
+    display: block;
+    text-align: right;
+  }
+  .btn-container .btn {
+    font-size: 1.3rem;
+    padding: 1.2em 1.5em;
+  }
+
+  /* ################ card-container################### */
+  .target-easybank {
+    width: 100%;
+  }
+  .target-easybank h1 {
+    text-align: left;
+  }
+  .target-easybank p {
+    text-align: left;
+  }
+  .card-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+  }
+  .target-easybank-container {
+    flex-wrap: wrap;
+  }
+
+  /* ################ card-container################### */
+
+  /* ################ articles ######### */
+
+  .card-wrapper {
+    display: flex;
+  }
+  .card-wrapper .card-container {
+    flex-direction: column;
+    margin: 0px 5px;
+  }
+  .card-img img {
+    height: 200px;
+  }
+
+  .banner-box1 {
+    background-image: url(./images/bg-intro-desktop.svg) !important;
+    width: 100%;
+    background-position: 10% 15%;
+    /* height: 600px; */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /* ################ articles ######### */
+
+  /* section-container */
+
+  .section-container {
+    display: flex;
+  }
+  .section-container-child > div {
+    text-align: left;
+  }
+  .section-container-child h4 {
+    text-align: left;
+  }
+  .section-container-child p {
+    text-align: left;
+  }
+  .section-container-child {
+    margin: 17px 17px;
+    background-color: hsl(0, 0%, 98%);
+  }
+  .target-easybank-container {
+    background-color: hsl(0, 0%, 98%);
+  }
+  /* section-container */
+
+  /* ##### footer ######## */
+  .footer-img-container {
+    gap: 10px;
+    width: 70%;
+    min-width: 142px;
+  }
+  .footer-container {
+    display: flex;
+    height: 229px;
+    flex-direction: row;
+  }
+  .footer-box1 {
+    all: unset;
+    width: 70%;
+    display: flex;
+  }
+  .footer-box2 {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  .footer-box2 .copyright {
+    margin: 10px 0px;
+  }
+  .footer-links {
+    font-size: 1.5rem;
+  }
+  .p-7px {
+    padding-top: 7px;
+  }
+  .footer-list-container {
+    columns: 2;
+    width: 70%;
+    align-self: center;
+  }
+  .social-logo {
+    width: 30%;
+    flex-direction: column;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  /* ##### footer ######## */
+
+  .copyright {
+    font-size: 1.5rem;
+    text-align: right;
+  }
+
+  /* #### footer #### */
+
+  /*########### banner-container ################# */
+
+  .banner-container {
+    display: flex;
+  }
+  .banner-box1 {
+    width: 50%;
+    order: 2;
+    background-position: bottom -25px left -90px;
+    background-size: 190% 140%;
+  }
+  .banner-box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    order: 1;
+    padding: 0px 120px;
+    /* width: 50%; */
+    text-align: left !important;
+  }
+  .banner-box2 > div {
+    width: 100%;
+  }
+  .banner-box2 h1 {
+    text-align: left !important;
+  }
+  .banner-box2 p {
+    text-align: left !important;
+  }
+  .banner-box2 .btn-Wrapper {
+    text-align: left !important;
+    width: 100%;
+  }
+  .bg-color-EasyBank {
+    margin-top: -44px;
+  }
+  /* ########### banner-container ################# */
+}
+
+/* ########################## desktop Version ############## */
