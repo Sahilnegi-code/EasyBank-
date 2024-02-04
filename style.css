@@ -10,7 +10,7 @@
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 .bg-color-EasyBank {
@@ -89,7 +89,7 @@ a {
   opacity: 1;
   background-color: white;
   transition: all 0.2s ease;
-  box-shadow: 10px 149px 200px black;
+  box-shadow: 17px 33px 297px black;
 }
 
 /* ############# HAMBURGER-BURGER ##########  */
